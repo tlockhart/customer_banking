@@ -16,7 +16,7 @@ def validate_input(prompt, number_type=float):
         # Replaces the first occurrence of a comma (",") with an empty string. 
         # By specifying 1, it ensures that only one comma is removed if it exists
         user_input = (input(prompt)).strip().replace(',', '')
-        print("INPUT: ", user_input)
+        # print("INPUT: ", user_input)
         if number_type == "number":
             number_type = float
         try:
