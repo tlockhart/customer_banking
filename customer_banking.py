@@ -25,14 +25,18 @@ def validate_input(prompt, number_type=float):
         except ValueError:
             if number_type == "number":
                 connector = "a"
-                type_name = "float"
+                type_name = "decimal"
+                print(f"Please enter an integer, with an optional decimal point (e.g., 5 or 5.0).")
             elif number_type.__name__ == "float":
                 connector = "a"
-                type_name = number_type.__name__
+                # type_name = number_type.__name__
+                type_name = "decimal"
+                print(f"Please enter an integer, with an optional decimal point (e.g., 5 or 5.0).")
             elif number_type.__name__ == "int":
                 connector = "an"
-                type_name = number_type.__name__
-            print(f"Please enter the value as {connector} {type_name}.")
+                # type_name = number_type.__name__
+                type_name = "integer"
+                print(f"Please enter the value as {connector} {type_name}.")
             
 # Define the main function
 def main():
